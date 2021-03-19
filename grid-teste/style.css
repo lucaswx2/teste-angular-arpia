@@ -1,0 +1,39 @@
+.grid-container {
+  display: grid;
+  grid-gap: 24px;
+  background-color: #fff;
+  grid-template-columns: 1fr 1fr;
+  color: #444;
+  min-height: 600px;
+  width: auto;
+}
+
+
+.item.a {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: blue;
+}
+
+
+.item.b {
+  background: linear-gradient(to right, green, red);
+}
+
+.item.c {
+  background: url(./assets/bg-grid.jpg);
+  background-position: top;
+  background-size: contain;
+}
+
+.item {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
