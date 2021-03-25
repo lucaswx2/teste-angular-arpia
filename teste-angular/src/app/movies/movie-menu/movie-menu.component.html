@@ -1,0 +1,23 @@
+<nav id="sidebar" [ngClass]="{ active: showMenu }">
+  <div class="sidebar-header">
+    <span>
+      <i class="fas fa-search"></i>
+    </span>
+    <input
+      type="text"
+      placeholder="Pesquisar"
+      (keyup)="search.emit($event.target.value)"
+      class="form-control"
+    />
+  </div>
+
+  <ul class="list-unstyled">
+    <p>Gêneros</p>
+    <li (click)="searchByGenre.emit('')">
+      <a href="#">Todos</a>
+    </li>
+    <li (click)="searchByGenre.emit(genre)" *ngFor="let genre of genres">
+      <a [href]="'#' + genre">{{ genre }}</a>
+    </li>
+  </ul>
+</nav>

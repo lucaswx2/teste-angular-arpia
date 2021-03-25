@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <app-movie-menu
+    [showMenu]="showMenu"
+    [genres]="genres"
+    (searchByGenre)="searchByGenre($event)"
+    (search)="search($event)"
+  ></app-movie-menu>
+
+  <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container-fluid">
+        <button class="btn btn-outline-dark" (click)="showMenu = !showMenu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h2>Controle de Filmes</h2>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <app-movie-list [movies]="movies"></app-movie-list>
+    </div>
+  </div>
+</div>

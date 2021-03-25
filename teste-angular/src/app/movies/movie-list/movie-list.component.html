@@ -1,0 +1,14 @@
+<div class="row movie-list">
+  <div class="col-md-6" *ngFor="let movie of movies">
+    <div class="movie">
+      <img [src]="movie.thumbnail" class="img" [alt]="movie.name" />
+      <div class="text-content">
+        <h3 class="title">{{ movie.name }}</h3>
+        <p class="description">{{ movie.description }}</p>
+        <p><b>Gêneros: </b> {{ movie.genres.join(",") }}</p>
+        <p><b>Diretor: </b> Woody Allen</p>
+        <p><b>Lançamento: </b>{{ movie.releasedAt | date: "dd/MM/yyyy" }}</p>
+      </div>
+    </div>
+  </div>
+</div>
